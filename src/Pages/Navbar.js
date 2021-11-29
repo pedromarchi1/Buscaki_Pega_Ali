@@ -2,20 +2,19 @@ import Kaique from '../img/logo-branca.png'
 import { useState } from 'react'
 
   function Navbar(){
-
+    const [TemaX, setTemaX] = useState(0);
 
     const Tema = () => {
         var tema
-        let ursinho = document.getElementById('ursinho')
-        let primeiro = document.getElementById('primeiro')
-        let bda = document.getElementById('bda')
 
+        
 
         if ( TemaX == 0) {
             tema = document.getElementById('root');
             let corE = "#2c2c2c";
             let colorE= "#FFF"
      
+            alert(window.location.href)
             setTemaX(1)
             console.log(TemaX)
 
@@ -26,6 +25,8 @@ import { useState } from 'react'
             tema = document.getElementById('root');
             let cor = "#e6f1f1"
             let color = "#000"
+
+            alert(window.location.href)
             setTemaX(0)
             console.log(TemaX)
 
@@ -77,8 +78,5 @@ import { useState } from 'react'
 }
 
 
-function Tema() {
-    
-    
-}
+
 export default Navbar;

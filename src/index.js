@@ -17,7 +17,7 @@
   import Main from './Main'
   import Produto from './Produtos';
   import PedroProduto from './Pedro_produt'
-  
+  import Pesquisa from './Pesquisa'
   
 
 
@@ -28,6 +28,7 @@
           <Route path="/" exact element={<Main />} />
           <Route path="/user" element={<Produto />} />
           <Route path="/comparacao" element={<PedroProduto />} />
+          <Route path="/Pesquisa" element={<Pesquisa />} />
         </Routes>
       </Router>, 
     document.getElementById('root')

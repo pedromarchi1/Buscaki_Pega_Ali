@@ -19,16 +19,18 @@ function Prod(){
             let x = document.getElementById("X")
             let i = document.getElementById("trocarIcone")
 
+
             setSumirX(1);
             console.log(element.style);
             console.log(SumirX);
 
-            element.style.display = "block";
-            border.style.border = "solid cyan";
-            botao.style.display = "none";
-            border.style.borderRadius = "15px 15px 15px 15px"
-            x.style.display = "flex";
-            i.style.display = "none";
+            element.style.display = "none";
+            border.style.border = "none";
+            botao.style.display = "block";
+            border.style.borderRadius = "none"
+            x.style.display = "none";
+            i.style.display = "flex";
+
 
         }else if(SumirX==1){
             
@@ -39,17 +41,17 @@ function Prod(){
             let x = document.getElementById("X")
             let i = document.getElementById("trocarIcone")
 
-
             setSumirX(0);
             console.log(element.style);
             console.log(SumirX);
 
-            element.style.display = "none";
+            element.style.display = "block";
             border.style.border = "none";
-            botao.style.display = "block";
-            border.style.borderRadius = "none"
-            x.style.display = "none";
-            i.style.display = "flex";
+            botao.style.display = "none";
+            border.style.borderRadius = "15px 15px 15px 15px"
+            x.style.display = "flex";
+            i.style.display = "none";
+            
         }
 
         
@@ -70,12 +72,12 @@ function Prod(){
                 <div class="col-5 j-margin">{/* IMG GRANDE */}
                     <img id="myImage1" src={celular} alt="" class="img-fluid j-img" />
                 </div>
-                <div id="trocarColuna2" class="col-5 m-2">{/* INFO DOS PRODUTOS */}
+                <div id="trocarColuna2" class="col-5 m-2" style={{display:""}}>{/* INFO DOS PRODUTOS */}
                     <div classNmae="torcasColuna2">
                         <div class="d-flex justify-content-between bd-highlight m-2">
                             <h6 class="bi bi-heart j-icone-frete"> Favoritar Produto</h6>
-                            <i id="trocarIcone" onClick={Sumir} class="bi bi-info-circle j-pointer"></i>
-                            <i id="X" onClick={Sumir} class="bi bi-x j-pointer" style={{display:"none"}}></i>
+                            <i id="trocarIcone" onClick={Sumir} style={{display:"none"}} class="bi bi-info-circle j-pointer"></i>
+                            <i id="X" onClick={Sumir} class="bi bi-x j-pointer" style={{display:"flex"}}></i>
                         </div>
                         <div class="row">
                             <div>
@@ -84,10 +86,10 @@ function Prod(){
                             </div>
                     </div>
                         <div >
-                            <button id="botaoSumir" type="button" class="btn btn-outline-info j-button col-12">Adicionar ao carrinho</button>
+                            <button id="botaoSumir" type="button" class="btn btn-outline-info j-button col-12" style={{display:"none"}}>Adicionar ao carrinho</button>
                         </div>
                     </div>
-                    <div id="ptsumir" style={{display: "none"}}>
+                    <div id="ptsumir" style={{display: "block"}}>
                         <h4 class="m-2 mb-3">
                             <ul class="lead">
                                 <li>Inclui 2 controles sem fio.</li>
@@ -107,26 +109,15 @@ function Prod(){
                 </div>
             </div>
         </div>
+
+        {/* parte do kaique */}
+        <div class="container j-boxshadow p-3 mt-5 mb-5">
+            <p></p>
+        </div>
     </div>
     );
 }
 
-
-
-
-// function Sumir() {
-    
-
-//     var trocarColuna2 = document.getElementById("trocarColuna2");
-//     trocarColuna2.classList.toggle("j-border")
-
-//     var botaoSumir = document.getElementById("botaoSumir");
-//     botaoSumir.classList.toggle("d-none");
-
-//     var trocarIcone = document.getElementById("trocarIcone");
-//     trocarIcone.classList.toggle("bi-info-circle");
-//     trocarIcone.classList.toggle("")
-// }      
 
 
 

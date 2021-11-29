@@ -11,12 +11,8 @@ function Footer(){
 
         <footer className="container-fluid fot pb-5">
             <div className="container">
-                <div>
-                    <RedesS />
-                    <Link />
-                </div>
                 <div className="row">
-                    <div className="col-12 col-md-6 col-lg-4 ajuste">  
+                    <div className="col-12 col-md-6 col-lg-3 ajuste">  
                         <p className="h4 title">
                             <img className="logo-footer" src={Logo} />
                         </p>
@@ -48,7 +44,7 @@ function Footer(){
                             </li>
                         </div> 
                     </div>
-                    <div className="col-12 col-md-6 col-lg-4 my-4 ajuste">  
+                    <div className="col-12 col-md-6 col-lg-3 my-4 ajuste">  
                         <p className="h4 title">
                             Popular
                         </p>
@@ -121,6 +117,10 @@ function Footer(){
                                 </a>
                             </li>
                         </div> 
+                    </div>
+                    <div className="col-12 col-md-6 col-lg-3 my-4 ajuste">
+                        <RedesS />
+                        <Link />
                     </div>
                 </div>
             </div>
