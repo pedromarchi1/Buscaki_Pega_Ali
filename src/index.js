@@ -18,12 +18,11 @@
   import Produto from './Produtos';
   import PedroProduto from './Pedro_produt'
   import Pesquisa from './Pesquisa'
-  
 
 
 
   ReactDOM.render(
-      <Router >
+      < Router >
         <Routes>
           <Route path="/" exact element={<Main />} />
           <Route path="/user" element={<Produto />} />

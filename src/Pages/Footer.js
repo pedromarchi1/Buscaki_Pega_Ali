@@ -1,7 +1,5 @@
 import Logo from '../img/logo-branca.png'
-import Facebook from './Redes/Facebook';
-import Instagram from './Redes/Insta';
-import Linkedin from './Redes/Linkedin';
+
 
 import Link from './Main/Link';
 import RedesS from './Main/NRedes';
@@ -12,7 +10,7 @@ function Footer(){
         <footer className="container-fluid fot pb-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-6 col-lg-3 ajuste">  
+                    <div id="mgfooter" className="col-12 col-md-6 col-lg-3 ajuste">  
                         <p className="h4 title">
                             <img className="logo-footer" src={Logo} />
                         </p>

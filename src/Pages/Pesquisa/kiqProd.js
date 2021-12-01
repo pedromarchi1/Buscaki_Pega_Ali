@@ -90,7 +90,7 @@ function Cartaozin(){
     ]
     return ( 
         cardsMain.map(cardMain=>(
-            <div class="col-3">
+            <div className="col-3">
                 <Card key={cardMain.id} mg={cardMain.value} alt={cardMain.title} img={cardMain.img} title={cardMain.title} value={cardMain.value}  />
             </div>
         ))

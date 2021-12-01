@@ -95,9 +95,7 @@ function MakeCard(){
     ]
     return ( 
         cardsMain.map(cardMain=>(
-            
                 <Card key={cardMain.id} mg={cardMain.value} alt={cardMain.title} img={cardMain.img} title={cardMain.title} value={cardMain.value}  />
-            
         ))
     )
 };
@@ -109,20 +107,14 @@ function MakeCard(){
 
 
 
-
 function Oferta() {
 
     const [scrollX, setScrollX] = useState(0)
-
-    
-    
-    
 
     const handleLeftArrow = () => {
         let tamanhoTela = window.innerWidth * 0.8;
         let quantidadeCards = 15;
         let tamanhoCards = 0.21;
-
 
         if(window.innerWidth < 800){
             tamanhoCards = 0.34;
@@ -147,8 +139,6 @@ function Oferta() {
         setScrollX(x)
         console.log(x)
     } 
-
-
 
     const handleRightArrow = () => {
         let tamanhoTela = window.innerWidth * 0.8;

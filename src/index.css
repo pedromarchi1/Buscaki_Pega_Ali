@@ -8,7 +8,13 @@
 
 
 
-
+.animation{
+  transition-duration: 100s;
+  overflow: hidden;
+}
+#setinha{
+  font-size: 1.7rem;
+}
 .center-pesq {
   justify-content: center;
   align-items: center;
@@ -75,6 +81,9 @@
  #logo {
    display: none;
  }
+ #mgfooter{
+   margin-top: 5%;
+ }
 }
 
 @media (min-width: 579px) {
@@ -113,6 +122,9 @@
    width: 100%;
    margin-top: 20%;
    margin-bottom: 5%;
+ }
+ #mgfooter{
+   margin-top: 3%;
  }
 }
 @media (min-width: 768px) {
@@ -162,8 +174,19 @@
    margin-top: 10%;
    margin-bottom: 5%;
  }
+ #mgfooter{
+  margin-top: 0%;
+}
 }
 
+.text-justify{
+  text-align: justify;
+  display: flex;
+}
+
+.spam-avaliacao{
+  color: black;
+}
 
 
 
