@@ -1,18 +1,19 @@
 
-
+import { Link } from "react-router-dom"
 // estrutura Dos Cards 
 
 
-export default (props) => {
+export default (props) => {   
+    console.log(props.id)
     return (
-        <div className="card" key={props.id}  >
-            <img className="img-card" src={props.img} className="card-img-top" alt={props.alt} />
+        <div className="card" key={props.id}  style={props.style} >
+            <img className="img-card" src={props.categoria} className="card-img-top" alt={props.title} />
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
-                <p className="h6">A partir de <br/>{"R$" + props.value}</p>
+                <p className="h6">A partir de <br/>{"R$" + props.valor}</p>
             </div>
             <div className="button">
-                <button href="#"  className="btn btn-primary">Confira</button>
+                <Link to={`/produto/${props.id}`}  className="btn btn-primary">Confira</Link>
             </div>
         </div>
     )

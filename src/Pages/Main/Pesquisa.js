@@ -1,5 +1,5 @@
 import Categorias from "./categorias";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Mpesq(){

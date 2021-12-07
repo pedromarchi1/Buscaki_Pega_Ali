@@ -3,11 +3,32 @@ import feijao from "../../img/feijao.png"
 import celular from '../../img/celular.png'
 import cafe from '../../img/cafe.png'
 
-import Medal from '../../img/medal-solid.svg'
-
-
+import Medal from '../../img/medal-solid.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Prod(){
+
+
+    
+    const Media = () => {
+
+        if ( window.window <= 1200){
+        let element = document.getElementById("ptsumir");
+        let border = document.getElementById("trocarColuna2")
+        let botao = document.getElementById("botaoSumir")
+        let x = document.getElementById("X")
+        let i = document.getElementById("trocarIcone")
+
+        element.style.display = "none";
+        border.style.border = "none";
+        botao.style.display = "block";
+        border.style.borderRadius = "none"
+        x.style.display = "none";
+        i.style.display = "flex";
+        }
+    
+    }
+    
 
     const [SumirX, setSumirX] = useState(0)
     const [Drop_1X, setDrop_1X] = useState(0)
@@ -85,7 +106,6 @@ function Prod(){
 
             let element = document.getElementById("ptsumir");
             let border = document.getElementById("trocarColuna2")
-            let botao = document.getElementById("botaoSumir")
             let x = document.getElementById("X")
             let i = document.getElementById("trocarIcone")
 
@@ -96,7 +116,7 @@ function Prod(){
 
             element.style.display = "none";
             border.style.border = "none";
-            botao.style.display = "block";
+    
             border.style.borderRadius = "none"
             x.style.display = "none";
             i.style.display = "flex";
@@ -107,7 +127,7 @@ function Prod(){
             
             let element = document.getElementById("ptsumir");
             let border = document.getElementById("trocarColuna2")
-            let botao = document.getElementById("botaoSumir")
+            
             let x = document.getElementById("X")
             let i = document.getElementById("trocarIcone")
 
@@ -117,44 +137,75 @@ function Prod(){
 
             element.style.display = "block";
             border.style.border = "none";
-            botao.style.display = "none";
             border.style.borderRadius = "15px 15px 15px 15px"
             x.style.display = "flex";
             i.style.display = "none";
             
-        } 
+        }
     }
 
 
     return(
-    <div>
-        <div className="container j-boxshadow p-3 mt-5 mb-5">
+    <div onLoad={Media}>
+        <div className="container-fluid container-resp d-flex j-boxshadow p-3 mt-5 mb-5">
             <div className="row">
-                <div className="col-1">
-                    <div className="d-flex align-items-start flex-column bd-highlight mb-3">{/* 3 IMAGENS PEQUENA */}
-                        <img src={feijao} id="mud" onClick={Fotoum} className="img-fluid j-img j-border j-pointer p-2 m-1" />
-                        <img src={celular} onClick={Fotodois} className="img-fluid j-img j-border j-pointer p-2 m-1" />
-                        <img src={cafe} onClick={Fototres} className="img-fluid j-img j-border j-pointer p-2 m-1" />
+                {/* Miniaturas PARA PC */}
+                <div className="d-none d-md-block col-12 col-md-2 col-xl-1">
+                    <div className="d-flex justify-content-between align-items-start flex-column bd-highlight mb-3">{/* 3 IMAGENS PEQUENA */}
+                        <div className="row d-md-none d-xl-block">
+                            <div className="col-2 col-md-12">
+                                <img src={feijao} id="mud" onClick={Fotoum} className="j-berder img-fluid  j-pointer p-2 m-1 img-ico" />
+                            </div>
+                            <div className="col-2 col-md-12">
+                                <img src={celular} onClick={Fotodois} className="img-fluid j-pointer p-2 m-1 img-ico" />
+                            </div>
+                            
+                            <div className="col-2 col-md-12">  
+                                <img src={cafe} onClick={Fototres} className="img-fluid j-pointer p-2 m-1 img-ico" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="col-5 j-margin">{/* IMG GRANDE */}
+                {/* /Miniaturas */}
+
+                {/* IMG GRANDE e TÍTULO */}
+                <div className="col-10 col-md-8 col-xl-3 j-margin ">
+                    <h4 className="m-2 mb-3 col-12 nome-prod d-block d-md-none">Nintendo Switch 32GB Standard cor vermelho-néon, azul-néon e preto</h4>
                     <img id="myImage1" src={celular} alt="" className="img-fluid j-img" />
                 </div>
-                <div id="trocarColuna2" className="col-5 m-2" style={{display:""}}>{/* INFO DOS PRODUTOS */}
-                    <div className="torcasColuna2">
+                {/* /IMG GRANDE e TÍTULO */}
+                
+                {/* MINIATURAS PARA MOBILE */}
+                <div className="col-12 col-xl-1 d-block d-md-none">
+                    <div className="d-flex align-items-start justify-content-between flex-column bd-highlight mb-3">{/* 3 IMAGENS PEQUENA */}
+                        <div className="row align-items-start justify-content-between">
+                            <div className="col-4 col-lg-12">
+                                <img src={feijao} id="mud" onClick={Fotoum} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
+                            </div>
+                            <div className="col-4 col-lg-12">
+                                <img src={celular} onClick={Fotodois} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
+                            </div>
+                            <div className="col-4 col-lg-12">    
+                                <img src={cafe} onClick={Fototres} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* /MINIATURAS PARA MOBILE */}
+
+                {/* INFO DOS PRODUTOS */}
+                <div id="trocarColuna2" className="col-11 col-xl-6 m-2" style={{display:""}}>
+                    <div>
                         <div className="d-flex justify-content-between bd-highlight m-2">
                             <h6 className="bi bi-heart j-icone-frete"> Favoritar Produto</h6>
                             <i id="trocarIcone" onClick={Sumir} style={{display:"none"}} className="bi bi-info-circle j-pointer"></i>
-                            <i id="X" onClick={Sumir} className="bi bi-x j-pointer" style={{display:"flex"}}></i>
+                            <i id="X" onClick={Sumir} className="bi bi-x j-pointer" style={{display:"flex"}}></i>{/* botão trocar telas */}
                         </div>
                         <div className="row">
                             <div>
-                                <h4 className="m-2 mb-3 col-12">Nintendo Switch 32GB Standard cor vermelho-néon, azul-néon e preto</h4>
+                                <h4 className="m-2 mb-3 col-12 nome-prod d-none d-lg-block">Nintendo Switch 32GB Standard cor vermelho-néon, azul-néon e preto</h4>
                                 <h4 className="m-2 mb-3 col-12">R$ 2.400,00 <span className="lead">ou em 12x 173,25 sem juros</span></h4>
                             </div>
-                    </div>
-                        <div >
-                            <button id="botaoSumir" type="button" className="btn btn-outline-info j-button col-12" style={{display:"none"}}>Adicionar ao carrinho</button>
                         </div>
                     </div>
                     <div id="ptsumir" style={{display: "block"}}>
@@ -169,19 +220,20 @@ function Prod(){
                                 <li>Conta com: 1 joy-con grip, 2 correias para joy-con, 1 dock, 1 cabo hdmi, 1 adaptador de corrente.</li>
                             </ul>
                         </h4>
+                    </div>
                         <div className="row mt-4 p-1">
                             <h6 className="col-12 p-2">Nome Vendedor(ClassNameificação Vendedor)</h6>
                             <button type="button" className="btn btn-outline-info j-button col-12">Adicionar ao carrinho</button>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
         {/* parte do kaique */}
-        <div className="container j-boxshadow p-3 mt-5 mb-5" >
+        <div className="container-fluid container-resp j-boxshadow p-3 mt-5 mb-5">
             <div className="d-flex justify-content-between" onClick={Drop_1}>
-                <p className="h3"><i class="bi bi-file-text"></i> DESCRIÇÃO DO PRODUTO</p>
+                <p className="h3"><i className="bi bi-file-text"></i> DESCRIÇÃO DO PRODUTO</p>
                 <i id="setinha" className="bi bi-chevron-down"></i>
             </div>
             <div id="drop1" className="animation">
@@ -197,9 +249,9 @@ function Prod(){
             </div>
         </div>
 
-        <div className="container j-boxshadow p-3 mt-5 mb-5" >
+        <div className="container-fluid container-resp j-boxshadow p-3 mt-5 mb-5">
             <div className="d-flex justify-content-between" onClick={Drop_2}>
-                <p className="h3"><i class="bi bi-file-text"></i> DESCRIÇÃO DO VENDEDOR</p>
+                <p className="h3"><i className="bi bi-file-text"></i> DESCRIÇÃO DO VENDEDOR</p>
                 <i id="setinha" className="bi bi-chevron-down"></i>
             </div>
             <div id="drop2" className="animation">
@@ -211,28 +263,25 @@ function Prod(){
             </div>
         </div>
 
-        <div className="container j-boxshadow p-3 mt-5 mb-5" >
+        <div className="container-fluid container-resp j-boxshadow p-3 mt-5 mb-5">
             <div className="d-flex justify-content-between" onClick={Drop_3}>
-                <p className="h3"><i class="bi bi-star-fill"></i> AVALIAÇÕES DOS USUÁRIOS</p>
+                <p className="h3"><i className="bi bi-star-fill"></i> AVALIAÇÕES DOS USUÁRIOS</p>
                 <i id="setinha" className="bi bi-chevron-down" ></i>
             </div>
             <div id="drop3" className="animation">
                 <br></br>
-                <p className="h3" style={{color:"#DAA520"}}>OURO <i class="fas fa-medal" style={{fontsize:'36px', color:"#DAA520"}}></i></p>
+                <p className="h3" style={{color:"#DAA520"}}>OURO <i className="fas fa-medal" style={{fontsize:'36px', color:"#DAA520"}}></i></p>
                 <p>(20 Avaliações)</p>
                 <hr></hr>
-                <p class="mb-0"><strong>Uma das melhores compras que eu fiz </strong>(01/12/2021)</p>
+                <p className="mb-0"><strong>Uma das melhores compras que eu fiz </strong>(01/12/2021)</p>
                 <p>Kaique Costa Vicentin</p>
-                <p>A Praticidade desse video-game é íncrivel. É estranho chamar o aparelho de CONSOLE, mas É UM CONSOLE. Apesar de ser muito pequeno, a Estrutura e o projeto é impecável, os encaixes dos controles e o acabamento é surreal. Podendo ser jogado na TV com o dock, ou carregar na sua mão para qualquer canto do mundo, da pra fazer uma viagem e jogar a vontade! Joguei por 4 horas seguidas e a bateria nem foi na metade. Impressionante.</p>
+                <p className="text-justify">A Praticidade desse video-game é íncrivel. É estranho chamar o aparelho de CONSOLE, mas É UM CONSOLE. Apesar de ser muito pequeno, a Estrutura e o projeto é impecável, os encaixes dos controles e o acabamento é surreal. Podendo ser jogado na TV com o dock, ou carregar na sua mão para qualquer canto do mundo, da pra fazer uma viagem e jogar a vontade! Joguei por 4 horas seguidas e a bateria nem foi na metade. Impressionante.</p>
                 <hr></hr>
             </div>
         </div>
     </div>
     );
 }
-
-
-
 
 function Fotoum() {
     let img = document.getElementById("myImage1");
@@ -246,9 +295,5 @@ function Fototres() {
     let img = document.getElementById("myImage1");
     img.setAttribute('src', '/static/media/cafe.aab6663a.png');
 }
-
-
-
-
 
 export default Prod;

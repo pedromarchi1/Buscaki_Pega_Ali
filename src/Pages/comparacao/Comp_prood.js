@@ -53,7 +53,7 @@ import Repeat from './Comp_repeat'
     ]
     return PropsProdutos.map(Produtos=>(
       <div>
-        <Repeat nome={Produtos.Nome} title={Produtos.title} img={Produtos.Image} Preço={Produtos.Preço} Frete={Produtos.Frete} />
+        <Repeat key={Produtos.id} nome={Produtos.Nome} title={Produtos.Title} img={Produtos.Image} Preço={Produtos.Preço} Frete={Produtos.Frete} />
       </div>
     ))
   }

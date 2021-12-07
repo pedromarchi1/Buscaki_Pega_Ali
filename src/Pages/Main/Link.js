@@ -1,4 +1,7 @@
 // Constri 
+
+import RedesS from "./NRedes"
+
          
 
 function Linkedin() {
@@ -36,7 +39,7 @@ function Instagram() {
 
 
 
-function Link() {
+function Redes() {
     return(
         <div className=" icones mb-4">
             <Linkedin />
@@ -46,4 +49,4 @@ function Link() {
     )
 }
 
-export default Link
+export default Redes;

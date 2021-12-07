@@ -3,7 +3,7 @@
 
 export default (props) => {
     return(
-    <div>
+    <div key={props.key}>
       <div className="container j-boxshadow">
         <div className="row mt-4">
           <div className="col-2">

@@ -1,5 +1,6 @@
 import Kaique from '../img/logo-branca.png'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
   function Navbar(){
     const [TemaX, setTemaX] = useState(0);
@@ -43,7 +44,7 @@ import { useState } from 'react'
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="offcanvas offcanvas-end black grande" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div className="offcanvas offcanvas-end black grande" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header">
                     <h5 className="offcanvas-title" id="offcanvasNavbarLabel"><img src={Kaique} className="d-block logo-branca-header" alt="Logo Buscaki pega ali cor branca" /></h5>
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -55,13 +56,13 @@ import { useState } from 'react'
                         <a className="nav-link branco" aria-current="page" href="#">Lojas</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link branco" href="#">Quem somos</a>
+                        <Link className="nav-link branco" to="/Pesquisa">Quem somos</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link branco" href="#">Parceiros</a>
+                        <Link className="nav-link branco" to="/produto">Parceiros</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link branco" href="#">Equipe</a>
+                        <Link className="nav-link branco" to="/user">Equipe</Link>
                         </li>
                             
                     </div>

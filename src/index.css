@@ -4,10 +4,23 @@
  /* Imports */
 
  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap%27');
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
 
-
-
-
+ .img-ico{
+  width: 129px !important;
+  height: 89px; 
+}
+.text-justify{
+  text-align: justify;
+  display: flex;
+}
+.spam-avaliacao{
+  color: black;
+}
+.j-img{
+  max-width: 98%;
+  width: 98%;
+}
 .animation{
   transition-duration: 100s;
   overflow: hidden;
@@ -74,9 +87,6 @@
    padding-top: 7rem;
    padding-bottom: 7rem;
  }
-
-
-
 @media (min-width: 455px) {
  #logo {
    display: none;
@@ -87,19 +97,20 @@
 }
 
 @media (min-width: 579px) {
- .CAT {
+  
+  .CAT {
    display: block;
- }
- #logo {
+  }
+  #logo {
    display: block;
- }
+  }
 
- .logo-branca-header{
+  .logo-branca-header{
    width: 200px;
- }
- .center .BBG{
+  }
+  .center .BBG{
    font-size: 6px;
- }
+  }
 }
 @media (min-width: 650px) {
 .tamsl1{
@@ -150,6 +161,9 @@
  .card p {
    font-size: 1.1rem;
  }
+ .container-resp{
+    max-width: 80%;
+ }
  
 }
 @media (min-width: 822px) {
@@ -178,17 +192,6 @@
   margin-top: 0%;
 }
 }
-
-.text-justify{
-  text-align: justify;
-  display: flex;
-}
-
-.spam-avaliacao{
-  color: black;
-}
-
-
 
 @media (min-width: 992px){
  .navbar-expand-lg .navbar-collapse {
@@ -280,9 +283,13 @@
  .tamsl3{
    height: auto;
  }
- 
+ .d-l-block{
+  display: block !important;
+ }
+ .d-l-none{
+  display: none !important;
+ }
 }
-
 
 @media (min-width: 1200px) {
  .bannerimgmd {
@@ -328,6 +335,12 @@
  .card {
    width: 18%;
  }
+ /* .img-fix{
+   max-width: 95%;
+ }
+ #my-img{
+   max-width: 100%;
+ } */
 }
 
 
@@ -670,6 +683,7 @@ body {
 .j-img-produto{
    margin: 10px;
  }
+ 
 .j-border{
      border: solid cyan;
      border-radius: 15px 15px 15px 15px;
@@ -677,10 +691,6 @@ body {
 .j-pointer{
    cursor: pointer;
  }
-.j-img{
-   width: 100%;
- }
-
  /* Comparação das lojas */
  .j-margin-left-2{
    margin-left: 25px;
@@ -746,3 +756,156 @@ body {
  #botaoSumir {
    margin-top: 52%;
  }
+ /*Registro Produtos */
+ .Border-RP {
+  box-shadow: -1px 5px 19px 3px rgba(0,0,0,0.40);
+  border-radius: 15px 15px 15px 15px;
+}
+.Adicionar-RP {
+  text-align: center;
+  font-size: 250%;
+}
+.RP-Form_desc{
+  height: 110px;
+}
+.RegistroProduto {
+  font-family: 'Outfit', sans-serif;
+}
+.j-input1{
+  height: 35px;
+  width: 25%;
+}
+.j-input-descricao{
+  height: 80px;
+  width: 80%;
+}
+.j-input2 {
+  height: 70px;
+  width: 50%
+}
+#row-RP .row {
+  height: auto;
+}
+.RP-Form {
+  margin: 3%;
+}
+.clbx {
+  margin-left: 1%;
+}
+
+
+/* Card Do Vendedor */
+
+.card_vendedor {
+  max-width: 250px;
+  margin: 150px auto 0;
+  background-image: linear-gradient(180deg,#8A2BE2,#33aaff);
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.card_vendedor .card-header-vendedor {
+  position: relative;
+  height: 48px;
+}
+.card_vendedor .card-header-vendedor .profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #2c2c2c;
+  box-shadow: 0 0 20px #33aaff;
+}
+
+.card_vendedor .card-header-vendedor .profile-img:hover {
+  width: 180px;
+  height: 180px;
+  border: 8px solid rgb(136, 8, 175);
+}
+.card_vendedor .card-body-vendedor {
+  padding: 10px 40px;
+}
+
+.card_vendedor .card-body-vendedor .nome {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card_vendedor .card-body-vendedor .nome:hover {
+  margin-top: 30px;
+  color:#33aaff;
+}
+
+.card_vendedor .card-body-vendedor .mail {
+  font-size: 14px;
+  color: #c2bdbd;
+}
+
+.card_vendedor .card-body-vendedor .mail:hover {
+  font-size: 16px;
+  color: #33aaff;
+}
+
+.card_vendedor .card-body-vendedor .trabalho {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.card_vendedor .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card_vendedor .social-links .fa-medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;    
+  color: #DAA520;
+  font-size: 20px;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 0 13px 30px 0;
+}
+
+.card_vendedor .social-links .fa-medal:last-child {
+  margin-right: 0;
+}
+
+.card_vendedor .card-footer-vendedor {
+  background-color: #2c2c2c;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px 0 20px 0;
+}
+
+.card_vendedor .card-footer-vendedor .count {
+  font-size: 14px;
+}  
+.count{
+  background-color: #DAA520;
+}
+.ouro{
+  color: #DAA520;
+  font-size: 23px;
+}
+.prata{
+  color:#c0c0c0;
+  font-size: 23px;
+}
+.bronze{
+  color:#cd7f32;
+  font-size: 23px;
+}
+
+
+

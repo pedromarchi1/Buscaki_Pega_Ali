@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 function Categorias() {
     return(
             <div className="d-flex justify-content-between GB">

@@ -11,7 +11,7 @@ function Banner(){
             <div className="container">
                 <div className="row bannerimg">
                     <div className="col-12 col-md-12 col-lg-6 bannerimg">
-                        <img  className="" src={Pedrao} alt="" />
+                        <img  className="" src="/static/media/logo-branca.c3ade16e.png" alt="" />
                     </div>
                     <div className=" col-12 col-md-12 col-lg-6">
                         <div className="text-white bannerimg">
