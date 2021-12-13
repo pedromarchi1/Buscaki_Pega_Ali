@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
     const Tema = () => {
         var tema
 
-        
-
         if ( TemaX == 0) {
             tema = document.getElementById('root');
             let corE = "#2c2c2c";
@@ -36,7 +34,6 @@ import { Link } from 'react-router-dom';
         }
     }
     
-
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-primary">
             <div className="container justify-content-between">
@@ -50,7 +47,6 @@ import { Link } from 'react-router-dom';
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
-                    
                     <div className="bd-highlight mb-3 CAT justify-content-center flex-grow-1 pe-3 align-items-center">
                         <li className="nav-item">
                         <a className="nav-link branco" aria-current="page" href="#">Lojas</a>
@@ -63,21 +59,17 @@ import { Link } from 'react-router-dom';
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link branco" to="/user">Equipe</Link>
-                        </li>
-                            
+                        </li>  
                     </div>
                     <div className="carrinho">
                         <a className="nav-link login" href="#">Login/Registre-se <i className="bi bi-person-circle"></i></a>
                         <div className="d-flex"><a className="nav-link" onClick={Tema} >Carrinho <i className="bi bi-cart2 " ></i></a></div>
-                    </div>
-                    
+                    </div> 
                 </div>
                 </div>
             </div>
         </nav>
     );
 }
-
-
 
 export default Navbar;

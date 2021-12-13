@@ -152,7 +152,7 @@ function Prod(){
                 {/* Miniaturas PARA PC */}
                 <div className="d-none d-md-block col-12 col-md-2 col-xl-1">
                     <div className="d-flex justify-content-between align-items-start flex-column bd-highlight mb-3">{/* 3 IMAGENS PEQUENA */}
-                        <div className="row d-md-none d-xl-block">
+                        <div className="row d-none d-xl-block">
                             <div className="col-2 col-md-12">
                                 <img src={feijao} id="mud" onClick={Fotoum} className="j-berder img-fluid  j-pointer p-2 m-1 img-ico" />
                             </div>
@@ -176,16 +176,16 @@ function Prod(){
                 {/* /IMG GRANDE e TÍTULO */}
                 
                 {/* MINIATURAS PARA MOBILE */}
-                <div className="col-12 col-xl-1 d-block d-md-none">
+                <div className="col-12 col-xl-1 d-block d-xl-none">
                     <div className="d-flex align-items-start justify-content-between flex-column bd-highlight mb-3">{/* 3 IMAGENS PEQUENA */}
                         <div className="row align-items-start justify-content-between">
-                            <div className="col-4 col-lg-12">
+                            <div className="col-4 col-xl-12">
                                 <img src={feijao} id="mud" onClick={Fotoum} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
                             </div>
-                            <div className="col-4 col-lg-12">
+                            <div className="col-4 col-xl-12">
                                 <img src={celular} onClick={Fotodois} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
                             </div>
-                            <div className="col-4 col-lg-12">    
+                            <div className="col-4 col-xl-12">    
                                 <img src={cafe} onClick={Fototres} className="img-fluid j-img j-border j-pointer p-2 m-1 img-ico" />
                             </div>
                         </div>

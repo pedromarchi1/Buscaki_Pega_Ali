@@ -1,11 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
-import cubo from '../../img/cubo.png'
-import { version } from 'react-dom';
-
-
-
-
 
 function RegistrarProduto (){
 
@@ -30,7 +23,6 @@ function RegistrarProduto (){
     console.log(deli);
     
     alert("Testeeee")
-
   }
 
   return (
@@ -41,7 +33,7 @@ function RegistrarProduto (){
                 <div>                      
                     <form className="row" onSubmit={Enviar}>
                       <div>
-                        
+
                         {/* Nome */}
                         
                         <label className="col-6">
@@ -51,7 +43,7 @@ function RegistrarProduto (){
                               <input type="text" aria-label="First name" onChange={e => setNome(e.target.value)} className="form-control" />
                           </div>                     
                         </label>
-                        
+
                         {/* Categoria */}
                         
                         <label className="col-6">
@@ -60,7 +52,7 @@ function RegistrarProduto (){
                               <input type="number" aria-label="First name" onChange={e => setValor(e.target.value)} class="form-control" />
                           </div>          
                         </label>
-                        
+
                         {/* Especificações */}
                         
                         <label className="col-12">
@@ -94,7 +86,9 @@ function RegistrarProduto (){
                             </select>
                         </div>
                        </div> 
+
                         {/* Fotos */}
+
                       <div className="row text-align-center">
                       <div className="align-center d-flex justify-content-center">
                         <h3 className="m-4">Fotos do produto:</h3>  
@@ -115,8 +109,7 @@ function RegistrarProduto (){
                               <input type="file" class="form-control" id="inputGroupFile02" multiple="multiple" />
                             </div>
                           </div>
-                      </div>                         
-     
+                      </div>
                       <button className="Border-RP" type="submit">Enviar</button>
                     </form>
                 </div>                    
@@ -126,7 +119,7 @@ function RegistrarProduto (){
   );
 }
 
-  export default RegistrarProduto;
+export default RegistrarProduto;
 
 
 

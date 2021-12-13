@@ -1,5 +1,3 @@
-
-
 function Instagram() {
     return(
             <div className="nav-item">
@@ -9,8 +7,6 @@ function Instagram() {
             </div>
     )
 }
-
-
 
 export default Instagram;
 

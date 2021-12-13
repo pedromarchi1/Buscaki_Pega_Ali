@@ -1,9 +1,5 @@
 
 
-
-
-
-
 function RedesS () { 
     return (
     <div className="Redes margin-t container-fluid">

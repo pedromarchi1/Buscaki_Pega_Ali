@@ -1,9 +1,4 @@
-//Imagem do Banner
-import Pedrao from '../../img/logo-branca.png'
 
-
-
-// Controi o Banner
 
 function Banner(){
     return (
@@ -16,14 +11,13 @@ function Banner(){
                     <div className=" col-12 col-md-12 col-lg-6">
                         <div className="text-white bannerimg">
                             <div className="texto-banner pa">
-                                <h1>Este o é melhor  <br /> site de vendas </h1>
+                                <h1>Este é o melhor site  de vendas do Brasil </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div> 
-
     )
 }
 

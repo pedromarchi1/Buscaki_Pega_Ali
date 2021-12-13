@@ -1,6 +1,7 @@
 import Card from './Card'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import CardVendedores from './CardVendedores';
 
 
 //  Faz o card
@@ -12,33 +13,36 @@ function MakeCard({ products, scrollX }){
         products.map((product, index) => {
             console.log(product.id)
             return (
-                <Card style={{ marginLeft: index === 0 ? scrollX + 'px' : '1%'}} key={product.id} mg={product.nome} alt={product.categoria} img={product.valor} title={product.descicao} value={product.estoque}  />
+                <CardVendedores 
+                    // style={{ marginLeft: index === 0 ? scrollX + 'px' : '1%'}} 
+                    id={product.id} 
+                    nome={product.nome} 
+                    image={product.image}
+                    email={product.email}
+                    nivel={product.nivel}
+                />
         )})
     );
 }
 
-
 function Vendedores() {
-
 
     const [scrollX, setScrollX] = useState(0)
     const [products, setProducts] = useState([]);
     const [filterCategoria, setFilterCategoria] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8081/api/produtos').then(function (response) {
+        fetch('http://localhost:8009/api/Vendedor').then(function (response) {
             return response.json();
         }).then((products) => {
             setProducts(products);
         })
     }, [])
 
-
     const handleLeftArrow = () => {
         let tamanhoTela = window.innerWidth * 0.8;
         let quantidadeCards = 15;
         let tamanhoCards = 0.21;
-
 
         if(window.innerWidth < 800){
             tamanhoCards = 0.34;
@@ -63,8 +67,6 @@ function Vendedores() {
         setScrollX(x)
         console.log(x)
     } 
-
-
 
     const handleRightArrow = () => {
         let tamanhoTela = window.innerWidth * 0.8;
@@ -92,27 +94,18 @@ function Vendedores() {
             }
         }
         
-
         setScrollX(x)
         console.log(x)
     }
 
-    
     return(  
-
-    <div className="center">
-        <i className="bi bi-chevron-left BBG" onClick={handleLeftArrow}></i>
-        <div className="cards" >
-            <MakeCard products={products} scrollX={scrollX} />
+        <div className="center">
+            <div className="cards" >
+                <MakeCard products={products} scrollX={scrollX} />
+            </div>
         </div>
-        <i className="bi bi-chevron-right BBG" onClick={handleRightArrow}></i>
-    </div>
     )
 }
 
-
-
-
 // Exporta o Card
-
 export default Vendedores;

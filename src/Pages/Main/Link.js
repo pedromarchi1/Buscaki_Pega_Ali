@@ -2,8 +2,6 @@
 
 import RedesS from "./NRedes"
 
-         
-
 function Linkedin() {
     return (
             <div className="nav-item p-3">
@@ -23,7 +21,6 @@ function Facebook(){
     )
 }
 
-
 function Instagram() {
     return(
             <div className="nav-item p-3">
@@ -33,11 +30,6 @@ function Instagram() {
             </div>
     )
 }
-
-
-
-
-
 
 function Redes() {
     return(

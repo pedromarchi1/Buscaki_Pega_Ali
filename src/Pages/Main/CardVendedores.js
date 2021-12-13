@@ -1,36 +1,23 @@
 import guilherme from '../../img/guilhermebroda.jpg'
 
-function CardVendedor() {
-
+export default (props) => { 
     return(
-        <div className="card_vendedor">
+        <div className="card_vendedor" key={props.id}>
             <div className="card-header-vendedor">
-                <img src={guilherme} alt="Profile Image" className="profile-img" />
+                <img src={props.image} alt="Profile Image" className="profile-img" />
             </div>
-
             <div className="card-body-vendedor">
-                <p className="nome">Guilherme Bodra</p>
-                <a href="mailto:gui.bguimaraes@senacp.edu.br" className="mail">enviar Email</a>
+                <p className="nome">{props.nome}</p>
+                <a href={"mailto:" + props.email} className="mail">Enviar Email</a>
                 <br />
-                <a href="https://web.whatsapp.com/send/?phone=5517981344583&text=Bomdia">whatsapp</a>
                 <p className="trabalho">Vendedor de Notebook</p>
             </div>
-            
             <div className="social-links">
-              <p className="ouro" >OURO<a href="#" className="fas fa-medal"></a></p>
+              <p className="ouro" >{props.nivel}<a href="#" className="fas fa-medal"></a></p>
             </div>
-    
             <div className="card-footer-vendedor">
                 <p className="count"> Melhor vendedor da semana</p>
             </div>
         </div>
     )       
 }
-
-export default CardVendedor;
-
-
-
-
-
-

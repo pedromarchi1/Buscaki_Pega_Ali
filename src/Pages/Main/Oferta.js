@@ -8,24 +8,21 @@ import { useParams } from 'react-router-dom'
 function MakeCard({ products, scrollX }){
     console.log("teste")
     return ( 
-        products.map((product, index) => {
-            console.log("Oferta")
-            console.log(product.id)
-            return(
+        
+        products.map((product, index) => (
             <Card 
                 style={{ marginLeft: index === 0 ? scrollX + 'px' : '1%'}} 
                 id={product.id} 
                 title={product.nome} 
+                image={product.image}
                 categoria={product.categoria} 
                 valor={product.valor} 
                 desc={product.descicao} 
                 estoque={product.estoque}  
             />
-            );
-        })
+        ))
     )
 };
-
 
 function Oferta() {
 
@@ -36,7 +33,7 @@ function Oferta() {
     const [filterCategoria, setFilterCategoria] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8081/api/produtos').then(function (response) {
+        fetch('http://localhost:8009/api/produtos').then(function (response) {
             return response.json();
         }).then((products) => {
             setProducts(products);
@@ -98,18 +95,9 @@ function Oferta() {
             }
         }
         
-
         setScrollX(x)
         console.log(x)
     }
-
-    
-    // const filterProducts = products.filter(product => {
-    //     if (filterCategoria) {
-    //         return product.categoria === filterCategoria
-    //     }
-    //     return true;
-    // })
 
     return(  
 
@@ -123,9 +111,5 @@ function Oferta() {
     )
 }
 
-
-
-
 // Exporta o Card
-
 export default Oferta;

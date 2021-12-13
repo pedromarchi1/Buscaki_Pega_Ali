@@ -2,7 +2,6 @@ import Pord from './Pages/Produto/Produto'
 import Navbar from './Pages/Navbar'
 import Footer from './Pages/Footer';
 
-
 function Produto () {
         return(
             <div>
@@ -12,4 +11,5 @@ function Produto () {
             </div>
         )
     }
+
 export default Produto;

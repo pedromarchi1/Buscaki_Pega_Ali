@@ -1,12 +1,9 @@
-
 // Importa as Imagems
 import Kaique from '../../img/logo-branca.png'
 import KIQ from '../../img/iphone.png'
 import BG from '../../img/mercado.png'
 
-
 // Constroi o Carrossel
-
  function Carrossel(){
     return (
         <div id="carouselExampleControls tamanho-carrossel" className="carousel slide" data-bs-ride="carousel">
@@ -63,8 +60,5 @@ import BG from '../../img/mercado.png'
     );
 }
 
-
-
 //Exporta o Carrossel pronto
-
 export default Carrossel;

@@ -2,31 +2,40 @@ import Card from './Card'
 import { useState, useEffect } from 'react'
 
 
+import xbox from '../../img/xbox.png';
+import ps from '../../img/ps.png'
+import inspiron from '../../img/Inspiron_5400.jpg'
+import computador from '../../img/computador.jpg'
+import guarda from '../../img/Guarda-roupa_1.webp'
 
 
 //  Faz o card
 function MakeCard({ products, scrollX }){
-    
     console.log(products);
-return ( 
-products.map((product, index) => {
-
-   
-    return (
-        <Card style={{ marginLeft: index === 0 ? scrollX + 'px' : '1%'}} key={product.id} mg={product.nome} alt={product.categoria} img={product.valor} title={product.descicao} value={product.estoque}  />
-    )})
+    return ( 
+    products.map((product, index) => {
+        return (
+            <Card 
+                style={{ marginLeft: index === 0 ? scrollX + 'px' : '1%'}} 
+                id={product.id} 
+                title={product.nome} 
+                image={product.image}
+                categoria={product.categoria} 
+                valor={product.valor} 
+                desc={product.descicao} 
+                estoque={product.estoque}  
+            />
+        )})
     )
 };
 
-
 function Foryou() {
-
     const [scrollX, setScrollX] = useState(0)
     const [products, setProducts] = useState([]);
     const [filterCategoria, setFilterCategoria] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8081/api/produtos').then(function (response) {
+        fetch('http://localhost:8009/api/ParaVC').then(function (response) {
             return response.json();
         }).then((products) => {
             setProducts(products);
@@ -64,8 +73,6 @@ function Foryou() {
         console.log(products.length)
     } 
 
-
-
     const handleRightArrow = () => {
         let tamanhoTela = window.innerWidth * 0.8;
         let quantidadeCards = products.length;
@@ -92,27 +99,19 @@ function Foryou() {
             }
         }
         
-
         setScrollX(x)
         console.log(x)
     }
-
-    
     return(  
-
-    <div className="center">
-        <i className="bi bi-chevron-left BBG" onClick={handleLeftArrow}></i>
-        <div className="cards" >
-            <MakeCard products={products} scrollX={scrollX} />
+        <div className="center">
+            <i className="bi bi-chevron-left BBG" onClick={handleLeftArrow}></i>
+            <div className="cards" >
+                <MakeCard products={products} scrollX={scrollX} />
+            </div>
+            <i className="bi bi-chevron-right BBG" onClick={handleRightArrow}></i>
         </div>
-        <i className="bi bi-chevron-right BBG" onClick={handleRightArrow}></i>
-    </div>
     )
 }
 
-
-
-
 // Exporta o Card
-
 export default Foryou;

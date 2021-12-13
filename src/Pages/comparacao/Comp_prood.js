@@ -4,56 +4,58 @@ import iphone3 from '../../img/iphone2.png'
 import iphone4 from '../../img/iphone3.png'
 import iphone5 from '../../img/iphone1.png'
 
-
 import Repeat from './Comp_repeat'
-
-
   function CompPrincipal(){
     const PropsProdutos =[
       {
         id:226,
         Image: iphone1,
-        Nome: "Loja1",
+        Nome: "Loginha do Clebin", 
         Title:"Iphone1",
-        Preço:"9.239,12",
+        Link:"/iphone",
+        Preço:"1.299,99",
         Frete:"30,00",
       },
       {
         id:326,
         Image: iphone2,
-        Nome: "Loja2",
+        Nome: "Seu donizvaldo",
         Title:"Iphone2",
-        Preço:"9.300,12",
+        Link:"/iphone",
+        Preço:"1.486,00",
         Frete:"30,00",
       },
       {
         id:366,
         Image: iphone3,
-        Nome: "Loja3",
+        Nome: "Assistência Técnica",
         Title:"Iphone3",
-        Preço:"9.350,12",
+        Link:"/iphone",
+        Preço:"1.350,00",
         Frete:"30,00",
       },
       {
         id:426,
         Image: iphone4,
-        Nome: "Loja4",
+        Nome: "Cris celulares e computadores",
         Title:"Iphone4",
-        Preço:"9.400,12",
+        Link:"/iphone",
+        Preço:"1.400,00",
         Frete:"30,00",
       },
       {
         id:466,
         Image: iphone5,
-        Nome: "Loja5",
+        Nome: "Loginha da esquina",
         Title:"Iphone5",
-        Preço:"9.435,12",
+        Link:"/iphone",
+        Preço:"1.435,00",
         Frete:"30,00",
       },
     ]
     return PropsProdutos.map(Produtos=>(
       <div>
-        <Repeat key={Produtos.id} nome={Produtos.Nome} title={Produtos.Title} img={Produtos.Image} Preço={Produtos.Preço} Frete={Produtos.Frete} />
+        <Repeat key={Produtos.id} nome={Produtos.Nome} Link={Produtos.Link} title={Produtos.Title} img={Produtos.Image} Preço={Produtos.Preço} Frete={Produtos.Frete} />
       </div>
     ))
   }

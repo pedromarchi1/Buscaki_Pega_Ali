@@ -8,9 +8,7 @@ import Foryou from './Pages/Main/4you'
 import Vendedores from './Pages/Main/Vendedores'
 import Footer from './Pages/Footer'
 
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardVendedor from './Pages/Main/CardVendedores'
 
 function Main() {
     return(
